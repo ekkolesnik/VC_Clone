@@ -63,6 +63,8 @@ class MyGroupsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.backgroundColor = UIColor.brandOrange
+        
         observeMyGroup()
         groupService.loadGroups()
 

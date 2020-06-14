@@ -14,6 +14,7 @@
 		8523FC772450D70B00578E09 /* NewsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8523FC762450D70B00578E09 /* NewsPhoto.swift */; };
 		8526B743241E5311002BAF77 /* VkLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526B742241E5311002BAF77 /* VkLoginViewController.swift */; };
 		852FD4822427E50900EE38D6 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852FD4812427E50900EE38D6 /* EnterViewController.swift */; };
+		8530D26E24965A6500A3763B /* UIColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8530D26D24965A6500A3763B /* UIColorPallete.swift */; };
 		8536C80F244D07F00052F7B4 /* NewsPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C80E244D07F00052F7B4 /* NewsPost.swift */; };
 		8537DD6324439E1F00533D74 /* FirebaseConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8537DD6224439E1F00533D74 /* FirebaseConnect.swift */; };
 		8540FB3B243E2C56003CA328 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8540FB3A243E2C56003CA328 /* GoogleService-Info.plist */; };
@@ -61,6 +62,7 @@
 		8523FC762450D70B00578E09 /* NewsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPhoto.swift; sourceTree = "<group>"; };
 		8526B742241E5311002BAF77 /* VkLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkLoginViewController.swift; sourceTree = "<group>"; };
 		852FD4812427E50900EE38D6 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
+		8530D26D24965A6500A3763B /* UIColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPallete.swift; sourceTree = "<group>"; };
 		8536C80E244D07F00052F7B4 /* NewsPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPost.swift; sourceTree = "<group>"; };
 		8537DD6224439E1F00533D74 /* FirebaseConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConnect.swift; sourceTree = "<group>"; };
 		8540FB3A243E2C56003CA328 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = CustomNavigation;
 			sourceTree = "<group>";
 		};
+		8530D26C24965A0500A3763B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8530D26D24965A6500A3763B /* UIColorPallete.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		8566F83323F3FEDB00EBD6DE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		85CB9BE523E02F33007E105D /* Lesson_1 */ = {
 			isa = PBXGroup;
 			children = (
+				8530D26C24965A0500A3763B /* Extension */,
 				8540FB3A243E2C56003CA328 /* GoogleService-Info.plist */,
 				85BC07D3245C507400D288C2 /* Operation */,
 				85C3110B2418963C0087CB40 /* Network */,
@@ -387,6 +398,7 @@
 				85C3110D2418968B0087CB40 /* SessionSingleton.swift in Sources */,
 				8519BA23240D871D00E0B8E8 /* CustomNavigationController.swift in Sources */,
 				85FE24782411AB9E006B15E7 /* ImageFullScreenController.swift in Sources */,
+				8530D26E24965A6500A3763B /* UIColorPallete.swift in Sources */,
 				85E0FFE2242D5B1C00EB3A2A /* Photo.swift in Sources */,
 				855317FA24315CFE00190803 /* GalleryCollectionViewController.swift in Sources */,
 				8537DD6324439E1F00533D74 /* FirebaseConnect.swift in Sources */,

@@ -79,6 +79,8 @@ class FriendsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.backgroundColor = UIColor.brandOrange
+        
         operQueue.qualityOfService = .userInteractive
         
         let getData = FriendsDataOperation(reqest: path)
