@@ -16,7 +16,6 @@ protocol ServiceProtocol {
 
     func loadNewsPost(startFrom: String, completion: @escaping (String) -> Void)
     func loadUsers(completion: @escaping () -> Void)
-//    func loadGroups(handler: @escaping () -> Void)
     func loadGroups() -> Promise<[Groups]>
     func loadPhotos(addParameters: [String: String], completion: @escaping () -> Void)
     func getImageByURL(imageURL: String) -> UIImage?

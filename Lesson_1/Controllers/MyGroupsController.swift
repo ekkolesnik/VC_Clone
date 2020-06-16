@@ -167,22 +167,22 @@ class MyGroupsController: UITableViewController {
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         
         // Проверяем идентификатор перехода, чтобы убедиться, что это нужный
-        if segue.identifier == "addGroup" {
-            // Получаем ссылку на контроллер, с которого осуществлен переход
-            guard let availableGroupController = segue.source as? AvailableGroupsController else { return }
-            // Получаем индекс выделенной ячейки
-            if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
-                // Получаем город по индексу
-                let groups = availableGroupController.avaGroup[indexPath.row]
-                // Проверяем, что такого города нет в списке
-                if !groupForSearch.contains(where: { $0.name == groups.name }) {
-                    // Добавляем город в список выбранных
-                    groupForSearch.append(groups)
-                    // Обновляем таблицу
-                    tableView.reloadData()
-                }
-            }
-        }
+//        if segue.identifier == "addGroup" {
+//            // Получаем ссылку на контроллер, с которого осуществлен переход
+//            guard let availableGroupController = segue.source as? AdapterTableViewController else { return }
+//            // Получаем индекс выделенной ячейки
+//            if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
+//                // Получаем город по индексу
+//                let groups = availableGroupController.avaGroup[indexPath.row]
+//                // Проверяем, что такого города нет в списке
+//                if !groupForSearch.contains(where: { $0.name == groups.name }) {
+//                    // Добавляем город в список выбранных
+//                    groupForSearch.append(groups)
+//                    // Обновляем таблицу
+//                    tableView.reloadData()
+//                }
+//            }
+//        }
     }
     
     //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

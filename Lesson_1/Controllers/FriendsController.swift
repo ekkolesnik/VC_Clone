@@ -12,6 +12,13 @@ import RealmSwift
 class FriendsController: UITableViewController {
     let friendService: ServiceProtocol = DataForServiceProtocol()
     
+    //====== для Адаптера
+    
+//    var test = UserAdapter()
+//    var user: [ForUserAdapter] = []
+    
+    //======
+    
     //инициализируем фотоКэш
     lazy var photoCache = PhotoCache(table: self.tableView)
     
@@ -25,8 +32,6 @@ class FriendsController: UITableViewController {
     var sectionsForBuild: [Results<User>] {
         searchController.isActive ? filteredSections : sections
     }
-    
-//    var cachedAvatars = [String: UIImage]()
     
     let searchController: UISearchController = .init()
     
@@ -101,6 +106,15 @@ class FriendsController: UITableViewController {
         
         //регистрируем xib header
         tableView.register(UINib(nibName: "FriendCellXIBView", bundle: nil), forHeaderFooterViewReuseIdentifier: "headerView")
+        
+        //======= реализация Адаптера
+        
+//        test.getFriends() { [weak self] users in
+//            self?.user = users
+//        }
+        
+        //=======
+        
     }
     
     // MARK: - Подготовка к перходу на CollectionView

@@ -1,31 +1,26 @@
 //
-//  AvailableGroupsController.swift
+//  AdapterTableViewController.swift
 //  Lesson_1
 //
-//  Created by Evgeny Kolesnik on 07.02.2020.
+//  Created by Evgeny Kolesnik on 16.06.2020.
 //  Copyright © 2020 Evgeny Kolesnik. All rights reserved.
 //
 
 import UIKit
 
-class AvailableGroupsController: UITableViewController {
+class AdapterTableViewController: UITableViewController {
     
-    let avaGroup = [Groups]()
-//        Groups(name: "Мужики за 40", image: UIImage(named: "img11")!),
-//        Groups(name: "Автобарахолка", image: UIImage(named: "img12")!),
-//        Groups(name: "Сериалы", image: UIImage(named: "img13")!),
-//        Groups(name: "Новости недели", image: UIImage(named: "img14")!),
-//        Groups(name: "Комиксы", image: UIImage(named: "img15")!)
-//    ]
+    var adapter = UserAdapter()
+    var user: [ForUserAdapter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        adapter.getFriends() { [weak self] users in
+            self?.user = users
+            self?.tableView.reloadData()
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -35,20 +30,25 @@ class AvailableGroupsController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return avaGroup.count
+        return user.count
     }
+
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AvailableGroupsCell", for: indexPath) as? AvailableGroupsCell else {
-            preconditionFailure("Can't create FriensCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AdapterCell", for: indexPath) as? AdapterCell else {
+        preconditionFailure("Can't create AdapterCell")
         }
 
-        let nameAvaGroups = avaGroup[indexPath.row]
-        cell.avaGroupName.text = nameAvaGroups.name
- //       cell.avaGroupImage.image = nameAvaGroups.image
+        let userAdapter = user[indexPath.row]
+        
+//        let image = service.getImageByURL(imageURL: userAdapter.image)
+        
+        cell.nameLabel.text = userAdapter.firstName + " " + userAdapter.lastName
 
         return cell
+        
     }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,25 +96,3 @@ class AvailableGroupsController: UITableViewController {
     */
 
 }
-
-//@IBDesignable class AvailableGroupViewImage: UIView {
-//    
-//    @IBInspectable var shadowColor: UIColor = .clear {
-//        didSet {
-//            self.layer.shadowColor = shadowColor.cgColor
-//        }
-//    }
-//    
-//    @IBInspectable var shadowRadius: CGFloat = 6.0 {
-//        didSet {
-//            self.layer.shadowRadius = shadowRadius
-//        }
-//    }
-//    
-//    @IBInspectable var shadowOpacity: Float = 0.7 {
-//        didSet {
-//            self.layer.shadowOpacity = shadowOpacity
-//        }
-//    }
-//}
-

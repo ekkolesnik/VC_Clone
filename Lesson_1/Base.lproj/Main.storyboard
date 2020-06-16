@@ -790,16 +790,16 @@
             </objects>
             <point key="canvasLocation" x="1911.594202898551" y="857.8125"/>
         </scene>
-        <!--Available Groups-->
+        <!--Use Adapter-->
         <scene sceneID="Z24-If-pVg">
             <objects>
-                <tableViewController id="ycp-LK-HOi" customClass="AvailableGroupsController" customModule="VK_clone" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ycp-LK-HOi" customClass="AdapterTableViewController" customModule="VK_clone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N8z-o4-oNC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvailableGroupsCell" id="AVm-Ya-bMZ" customClass="AvailableGroupsCell" customModule="VK_clone" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdapterCell" id="AVm-Ya-bMZ" customClass="AdapterCell" customModule="VK_clone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AVm-Ya-bMZ" id="jYs-XW-FqO">
@@ -849,9 +849,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ViewImage" destination="gDo-6C-Fzr" id="UZM-rU-8Pp"/>
-                                    <outlet property="avaGroupImage" destination="Kg4-Gt-gOc" id="eVc-03-vvq"/>
-                                    <outlet property="avaGroupName" destination="LTK-11-mwF" id="zCE-Md-Kbr"/>
+                                    <outlet property="nameLabel" destination="LTK-11-mwF" id="Wd9-Cp-yTW"/>
                                     <segue destination="QyI-b4-PAP" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSegue:" id="ioE-XB-ABk"/>
                                 </connections>
                             </tableViewCell>
@@ -861,7 +859,7 @@
                             <outlet property="delegate" destination="ycp-LK-HOi" id="XLY-2y-R6X"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Available Groups" id="g1Q-se-UJi"/>
+                    <navigationItem key="navigationItem" title="Use Adapter" id="g1Q-se-UJi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wS-WN-SYz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="QyI-b4-PAP" userLabel="Exit" sceneMemberID="exit"/>
