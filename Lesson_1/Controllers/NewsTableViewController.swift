@@ -64,6 +64,8 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.backgroundColor = UIColor.brandOrange
+        
         tableView.prefetchDataSource = self
         
         refreshControl = UIRefreshControl()
